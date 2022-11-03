@@ -8,10 +8,4 @@
 // 	alert(`First name: ${fname} Last name: ${lname}`);
 // };
 
-const form = document.getElementById('form1');
 const getFormvalue = () => {
-    const fname = form.elements['fname'].value;
-    const lname = form.elements['lname'].value;
-    alert(`First name: ${fname} Last name: ${lname}`);
-};
-

@@ -1,20 +1,40 @@
-// get all element id using querySelector
+// get form element using getElementById
+// let form = document.getElementById('myForm');
+// let input = form.getElementsByTagName('input');
+// let submitBtn = document.getElementById('submit');
 
-let userName = document.querySelector('#name')
-let userEmail = document.querySelector('#email')
-let submitBtn = document.querySelector('#submit')
+// // Create a function to validate the form data and add event listener to the submit button
+// submitBtn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     if  (input[0].value == "" && input[1].value == "") {
+//         console.log('Please enter a name and email');
+//     } else if (input[0].value == "") {
+//         console.log('Please enter your name');
+//     } else if (input[1].value == "") {
+//         console.log('Please enter your email');
+//     } else {
+//         console.log('form submitted');
+//     }
+// })
 
-// Create a function to validate the form data and add event listener to the submit button
+function validateForm() {
+    let form = document.getElementById('myForm');
+    let input = form.getElementsByTagName('input');
+    let submitBtn = document.getElementById('submit');
 
-function validateForm () {
-    submitBtn.addEventListener('click', function (e) {
-        e.preventDefault()
-        if (userName.value === '' || userEmail.value === '') {
-            console.log('Please fill out the form')
+    // Create a function to validate the form data and add event listener to the submit button
+    submitBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if  (input[0].value == "" && input[1].value == "") {
+            console.log('Please enter a name and email');
+        } else if (input[0].value == "") {
+            console.log('Please enter your name');
+        } else if (input[1].value == "") {
+            console.log('Please enter your email');
         } else {
-            console.log('Form Submitted')
+            console.log('form submitted');
         }
     })
 }
 
-validateForm()
+validateForm();
